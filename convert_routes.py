@@ -10,7 +10,6 @@ def strip_cidr(cidr):
     '''
     regex to return CIDR's from juniper routes
     '''
-    #return re.findall('(?:\d{1,3}\.){3}\d{1,3}(?:/\d\d?)?', cidr)
     return re.findall('[0-9]{1,3}(?:\.[0-9]{1,3}){0,3}/[0-9]+', cidr)
 
 def get_cidrs_from_file(cidrfile):
